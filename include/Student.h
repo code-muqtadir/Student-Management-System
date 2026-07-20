@@ -4,12 +4,15 @@
 
 class Student {
     private:
-        int studentId;
-        std::string studentName;
+        std::string studentId;
+        std::string studentFullName;
         std::string department;
+        int semester;
         double cgpa;
         std::string studentPhone;
         std::string studentEmail;
+        std::string studentAddress;
+        std::string studentDateOfBirth;
     public:
 
 };
