@@ -20,4 +20,15 @@ class Student {
                std::string studentAddress,std::string studentDateOfBirth
          );
 
+         std::string getStudentId() const;
+         std::string getStudentFullName()const;
+         std::string getDepartment() const;
+         int getSemester() const;
+         double getCgpa() const;
+         std::string getStudentPhone() const;
+         std::string getStudentEmail() const;
+         std::string getStudentAddress() const;
+         std::string getStudentDateOfBirth() const;
+         
+
 };

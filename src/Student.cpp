@@ -16,3 +16,41 @@ Student::Student(std::string studentId, std::string studentFullName,
             this->studentAddress = studentAddress;
             this->studentDateOfBirth = studentDateOfBirth;
          }
+
+         std::string Student::getStudentId() const
+         {
+            return studentId;
+         }
+         std::string Student::getStudentFullName() const
+         {
+            return studentFullName;
+         }
+         std::string Student::getDepartment() const
+         {
+            return department;
+         }
+         int  Student::getSemester() const
+         {
+            return semester;
+         }
+         double Student::getCgpa() const
+         {
+            return cgpa;
+         }
+         std::string Student::getStudentPhone() const
+         {
+            return studentPhone;
+         }
+         std::string Student::getStudentEmail() const
+         {
+            return studentEmail;
+         }
+         std::string Student::getStudentAddress() const
+         {
+            return studentAddress;
+         }
+         std::string Student::getStudentDateOfBirth() const
+        {
+            return studentDateOfBirth;
+        }
+         

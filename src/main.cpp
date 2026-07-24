@@ -14,5 +14,9 @@ int main(){
         "1999-01-01");
 
         std::cout << "Student object created successfully!" << std::endl;
+
+        std::cout << "Student ID: " << s.getStudentId() << std::endl;
+        std::cout << "Student Full name: " << s.getStudentFullName() << std::endl;
+        
     return 0;
 }
