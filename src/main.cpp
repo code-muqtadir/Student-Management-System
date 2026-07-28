@@ -16,6 +16,6 @@ int main(){
         std::cout << "Student object created successfully!" << std::endl;
 
         s.displayStudent();
-        
+
     return 0;
 }

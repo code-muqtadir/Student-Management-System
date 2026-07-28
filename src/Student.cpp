@@ -18,6 +18,47 @@ Student::Student(std::string studentId, std::string studentFullName,
             this->studentDateOfBirth = studentDateOfBirth;
          }
 
+         // Setter methods
+         
+         void Student::setStudentId(std::string studentId)
+         {
+            this->studentId = studentId;
+         }
+         void Student::setStudentFullName(std::string studentFullName)
+         {
+            this->studentFullName = studentFullName;
+         }
+         void Student::setDepartment(std::string department)
+         {
+            this->department = department;
+         }
+         void Student::setSemester(int semester)
+         {
+            this->semester = semester;
+         }
+         void Student::setCgpa(double cgpa)
+         {
+            this-> cgpa = cgpa;
+         }
+         void Student::setStudentPhone(std::string studentPhone)
+         {
+            this->studentPhone = studentPhone;
+         }
+         void Student::setStudentEmail(std::string studentEmail)
+         {
+            this->studentEmail = studentEmail;
+         }
+         void Student::setStudentAddress(std::string studentAddress)
+         {
+            this->studentAddress= studentAddress;
+         }
+         void Student::setStudentDateOfBirth(std::string studentDateOfBirth)
+         {
+            this->studentDateOfBirth = studentDateOfBirth;
+         }
+
+         // Getter methods
+
          std::string Student::getStudentId() const
          {
             return studentId;
