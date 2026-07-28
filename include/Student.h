@@ -29,6 +29,8 @@ class Student {
          std::string getStudentEmail() const;
          std::string getStudentAddress() const;
          std::string getStudentDateOfBirth() const;
+
+         void displayStudent() const; 
          
 
 };

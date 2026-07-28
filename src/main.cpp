@@ -15,8 +15,7 @@ int main(){
 
         std::cout << "Student object created successfully!" << std::endl;
 
-        std::cout << "Student ID: " << s.getStudentId() << std::endl;
-        std::cout << "Student Full name: " << s.getStudentFullName() << std::endl;
+        s.displayStudent();
         
     return 0;
 }

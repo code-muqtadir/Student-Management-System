@@ -1,4 +1,5 @@
 #include "../include/Student.h"
+#include <iostream>
 
 Student::Student(std::string studentId, std::string studentFullName,
                std::string department, int semester, double cgpa,
@@ -52,5 +53,18 @@ Student::Student(std::string studentId, std::string studentFullName,
          std::string Student::getStudentDateOfBirth() const
         {
             return studentDateOfBirth;
+        }
+
+        void Student::displayStudent() const
+        {
+            std::cout << "Student ID: " << studentId << std::endl;
+            std::cout << "Full Name: " << studentFullName << std::endl;
+            std::cout << "Department: " << department << std::endl;
+            std::cout << "Semester: " << semester << std::endl;
+            std::cout << "CGPA: " << cgpa << std::endl;
+            std::cout << "Phone: " << studentPhone << std::endl;
+            std::cout << "Email: " << studentEmail << std::endl;
+            std::cout << "Address: " << studentAddress << std::endl; 
+            std::cout << "Date of Birth: " << studentDateOfBirth << std::endl; 
         }
          
