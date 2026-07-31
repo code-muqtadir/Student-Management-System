@@ -41,12 +41,14 @@ int main(){
     manager.addStudent(s2);
     manager.addStudent(s3);
     
-    manager.findStudentById("S002");
+    std::cout << "Showing all students before removal:\n" << std::endl;
+    manager.displayAllStudents();
 
-    manager.findStudentById("S004");
+    std::cout << "\nRemoving student with ID S002...\n" << std::endl;
+    manager.removeStudentById("S002");
 
-    std::cout << "Change the user name of GitHub" << std::endl;
-    
+    std::cout << "\nShowing all students after removal:\n" << std::endl;
+    manager.displayAllStudents();
 
     return 0;
 }
