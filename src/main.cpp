@@ -44,6 +44,8 @@ int main(){
     manager.findStudentById("S002");
 
     manager.findStudentById("S004");
+
+    std::cout << "Change the user name of GitHub" << std::endl;
     
 
     return 0;
