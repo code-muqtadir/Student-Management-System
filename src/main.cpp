@@ -17,8 +17,34 @@ int main(){
         "123 Main St", 
         "1999-01-01");
 
-        manager.addStudent(s1);
-        manager.displayAllStudents();
+    Student s2(
+        "S002", 
+        "Jane Smith", 
+        "Mathematics", 
+        2, 3.9, 
+        "098-765-4321", 
+        "jane.smith@example.com", 
+        "456 Oak Ave", 
+        "2000-05-15");
+
+    Student s3(
+        "S003", 
+        "Alice Johnson", 
+        "Physics", 
+        4, 3.8, 
+        "555-123-4567", 
+        "alice.johnson@example.com", 
+        "789 Pine Rd", 
+        "1998-11-20");
+
+    manager.addStudent(s1);
+    manager.addStudent(s2);
+    manager.addStudent(s3);
+    
+    manager.findStudentById("S002");
+
+    manager.findStudentById("S004");
+    
 
     return 0;
 }
