@@ -41,14 +41,7 @@ int main(){
     manager.addStudent(s2);
     manager.addStudent(s3);
     
-    std::cout << "Showing all students before removal:\n" << std::endl;
-    manager.displayAllStudents();
-
-    std::cout << "\nRemoving student with ID S002...\n" << std::endl;
-    manager.removeStudentById("S002");
-
-    std::cout << "\nShowing all students after removal:\n" << std::endl;
-    manager.displayAllStudents();
+    manager.updateStudentById("S003");
 
     return 0;
 }

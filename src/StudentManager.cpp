@@ -39,3 +39,38 @@ void StudentManager::removeStudentById(const std::string& studentId)
     }
     std::cout << "Student with ID " << studentId << " not found." << std::endl; 
 }
+
+void StudentManager::updateStudentById(const std::string& studentId)
+{
+    for(auto it = students.begin(); it != students.end(); ++it)
+    {
+        if(it->getStudentId() == studentId)
+        {
+            std::string newFullName, newDepartment;
+            int newSemester;
+            double newCGPA;
+
+            std::cout << "Enter new full name: ";
+            std::getline(std::cin >> std::ws, newFullName);
+            it->setStudentFullName(newFullName);
+
+            std::cout << "Enter new department: ";
+            std::getline(std::cin >> std::ws, newDepartment);
+            it->setStudentDepartment(newDepartment);
+
+            std::cout << "Enter new semester: ";
+            std::cin >> newSemester;
+            it->setStudentSemester(newSemester);
+
+            std::cout << "Enter new CGPA: ";
+            std::cin >> newCGPA;
+            it->setStudentCGPA(newCGPA);
+
+            std::cout << "Student with ID " << studentId << " has been updated." << std::endl;
+
+            it->displayStudent(); // Display the updated student information
+            return;
+        }
+    }
+    std::cout << "Student with ID " << studentId << " not found." << std::endl;
+}

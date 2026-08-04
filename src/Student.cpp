@@ -2,16 +2,16 @@
 #include <iostream>
 
 Student::Student(std::string studentId, std::string studentFullName,
-               std::string department, int semester, double cgpa,
+               std::string studentDepartment, int studentSemester, double studentCGPA,
                std::string studentPhone, std::string studentEmail,
                std::string studentAddress,std::string studentDateOfBirth
          )
          {
             this->studentId = studentId;
             this->studentFullName = studentFullName;
-            this->department = department;
-            this->semester = semester;
-            this->cgpa = cgpa;
+            this->studentDepartment = studentDepartment;
+            this->studentSemester = studentSemester;
+            this->studentCGPA = studentCGPA;
             this->studentPhone = studentPhone;
             this->studentEmail = studentEmail;
             this->studentAddress = studentAddress;
@@ -28,17 +28,17 @@ Student::Student(std::string studentId, std::string studentFullName,
          {
             this->studentFullName = studentFullName;
          }
-         void Student::setDepartment(std::string department)
+         void Student::setStudentDepartment(std::string studentDepartment)
          {
-            this->department = department;
+            this->studentDepartment = studentDepartment;
          }
-         void Student::setSemester(int semester)
+         void Student::setStudentSemester(int studentSemester)
          {
-            this->semester = semester;
+            this->studentSemester = studentSemester;
          }
-         void Student::setCgpa(double cgpa)
+         void Student::setStudentCGPA(double studentCGPA)
          {
-            this-> cgpa = cgpa;
+            this->studentCGPA = studentCGPA;
          }
          void Student::setStudentPhone(std::string studentPhone)
          {
@@ -67,17 +67,17 @@ Student::Student(std::string studentId, std::string studentFullName,
          {
             return studentFullName;
          }
-         std::string Student::getDepartment() const
+         std::string Student::getStudentDepartment() const
          {
-            return department;
+            return studentDepartment;
          }
-         int  Student::getSemester() const
+         int  Student::getStudentSemester() const
          {
-            return semester;
+            return studentSemester;
          }
-         double Student::getCgpa() const
+         double Student::getStudentCGPA() const
          {
-            return cgpa;
+            return studentCGPA;
          }
          std::string Student::getStudentPhone() const
          {
@@ -100,9 +100,9 @@ Student::Student(std::string studentId, std::string studentFullName,
         {
             std::cout << "Student ID: " << studentId << std::endl;
             std::cout << "Full Name: " << studentFullName << std::endl;
-            std::cout << "Department: " << department << std::endl;
-            std::cout << "Semester: " << semester << std::endl;
-            std::cout << "CGPA: " << cgpa << std::endl;
+            std::cout << "Department: " << studentDepartment << std::endl;
+            std::cout << "Semester: " << studentSemester << std::endl;
+            std::cout << "CGPA: " << studentCGPA << std::endl;
             std::cout << "Phone: " << studentPhone << std::endl;
             std::cout << "Email: " << studentEmail << std::endl;
             std::cout << "Address: " << studentAddress << std::endl; 
