@@ -98,6 +98,7 @@ Student::Student(std::string studentId, std::string studentFullName,
 
         void Student::displayStudent() const
         {
+            std::cout << "========================================" << std::endl;
             std::cout << "Student ID: " << studentId << std::endl;
             std::cout << "Full Name: " << studentFullName << std::endl;
             std::cout << "Department: " << studentDepartment << std::endl;
@@ -107,5 +108,6 @@ Student::Student(std::string studentId, std::string studentFullName,
             std::cout << "Email: " << studentEmail << std::endl;
             std::cout << "Address: " << studentAddress << std::endl; 
             std::cout << "Date of Birth: " << studentDateOfBirth << std::endl; 
+            std::cout << "========================================" << std::endl;
         }
          

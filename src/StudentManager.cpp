@@ -79,3 +79,20 @@ int StudentManager::countStudents() const
 {
     return students.size();
 }
+
+void StudentManager::displayStudentsByDepartment(const std::string& studentDepartment)
+{
+    bool found = false;
+    for (const Student& student : students)
+    {
+        if(student.getStudentDepartment() == studentDepartment)
+        {
+            student.displayStudent();
+            found = true;
+        }
+    }
+    if(!found)
+    {
+        std::cout << "No students found in department: " << studentDepartment << std::endl;
+    }
+}

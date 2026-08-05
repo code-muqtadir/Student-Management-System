@@ -15,4 +15,7 @@ class StudentManager
         void removeStudentById(const std::string& studentId);
         void updateStudentById(const std::string& studentId);
         int countStudents() const;
+        void displayStudentsByDepartment(const std::string& studentDepartment) ;
 };
+
+

@@ -37,11 +37,22 @@ int main(){
         "789 Pine Rd", 
         "1998-11-20");
 
+    Student s4(
+        "S004", 
+        "Bob Brown", 
+        "Computer Science", 
+        1, 3.6, 
+        "999-888-7777", 
+        "bob.brown@example.com", 
+        "321 Elm St", 
+        "2000-08-10");
+
     manager.addStudent(s1);
     manager.addStudent(s2);
     manager.addStudent(s3);
+    manager.addStudent(s4);
     
-    std::cout << "Total number of students: " << manager.countStudents() << std::endl;
+    manager.displayStudentsByDepartment("Computer Science");
 
     return 0;
 }
