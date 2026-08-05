@@ -41,7 +41,7 @@ int main(){
     manager.addStudent(s2);
     manager.addStudent(s3);
     
-    manager.updateStudentById("S003");
+    std::cout << "Total number of students: " << manager.countStudents() << std::endl;
 
     return 0;
 }

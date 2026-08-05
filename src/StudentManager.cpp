@@ -74,3 +74,8 @@ void StudentManager::updateStudentById(const std::string& studentId)
     }
     std::cout << "Student with ID " << studentId << " not found." << std::endl;
 }
+
+int StudentManager::countStudents() const
+{
+    return students.size();
+}
