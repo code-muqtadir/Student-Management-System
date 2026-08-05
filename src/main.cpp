@@ -52,7 +52,7 @@ int main(){
     manager.addStudent(s3);
     manager.addStudent(s4);
     
-    manager.displayStudentsByDepartment("Computer Science");
+    manager.findStudentsByName("John Doe");
 
     return 0;
 }

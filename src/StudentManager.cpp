@@ -96,3 +96,20 @@ void StudentManager::displayStudentsByDepartment(const std::string& studentDepar
         std::cout << "No students found in department: " << studentDepartment << std::endl;
     }
 }
+
+void StudentManager::findStudentsByName(const std::string& studentFullName) const
+{
+    bool found = false;
+    for (const Student& student : students)
+    {
+        if(student.getStudentFullName() == studentFullName)
+        {
+            student.displayStudent();
+            found = true;
+        }
+    }
+    if(!found)
+    {
+        std::cout << "No students found with name: " << studentFullName << std::endl;
+    }
+}
