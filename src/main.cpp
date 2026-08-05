@@ -51,8 +51,10 @@ int main(){
     manager.addStudent(s2);
     manager.addStudent(s3);
     manager.addStudent(s4);
-    
-    manager.displayStudentsBySemester(3);
+
+    manager.sortStudentsByName();
+
+    manager.displayAllStudents();
 
     return 0;
 }

@@ -1,5 +1,6 @@
 #include "../include/StudentManager.h"
 #include <iostream>
+#include<algorithm>
 
 void StudentManager::addStudent(const Student& student) 
 {
@@ -129,4 +130,12 @@ void StudentManager::displayStudentsBySemester(const int studentSemester) const
     {
         std::cout << "No students found in semester: " << studentSemester << std::endl;
     }
+}
+
+void StudentManager::sortStudentsByName()
+{
+    std::sort(students.begin(), students.end(), [](const Student& a, const Student& b)
+    {
+        return a.getStudentFullName() < b.getStudentFullName();
+    });
 }

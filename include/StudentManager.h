@@ -18,6 +18,8 @@ class StudentManager
         void displayStudentsByDepartment(const std::string& studentDepartment);
         void findStudentsByName(const std::string& studentFullName) const;
         void displayStudentsBySemester(const int studentSemester) const;
+        void sortStudentsByName();
+        
 };
 
 
