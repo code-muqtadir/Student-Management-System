@@ -21,7 +21,7 @@ int main(){
         "S002", 
         "Jane Smith", 
         "Mathematics", 
-        2, 3.9, 
+        3, 3.9, 
         "098-765-4321", 
         "jane.smith@example.com", 
         "456 Oak Ave", 
@@ -52,7 +52,7 @@ int main(){
     manager.addStudent(s3);
     manager.addStudent(s4);
     
-    manager.findStudentsByName("John Doe");
+    manager.displayStudentsBySemester(3);
 
     return 0;
 }

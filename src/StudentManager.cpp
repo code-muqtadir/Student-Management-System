@@ -113,3 +113,20 @@ void StudentManager::findStudentsByName(const std::string& studentFullName) cons
         std::cout << "No students found with name: " << studentFullName << std::endl;
     }
 }
+
+void StudentManager::displayStudentsBySemester(const int studentSemester) const
+{
+    bool found = false;
+    for(const Student& student : students)
+    {
+        if(student.getStudentSemester() == studentSemester)
+        {
+            student.displayStudent();
+            found = true;
+        }
+    }
+    if(!found)
+    {
+        std::cout << "No students found in semester: " << studentSemester << std::endl;
+    }
+}
