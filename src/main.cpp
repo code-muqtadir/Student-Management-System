@@ -52,11 +52,31 @@ int main(){
     manager.addStudent(s3);
     manager.addStudent(s4);
 
-    //manager.saveToFile("Student.txt");
+    int choice;
 
-    manager.loadFromFile("Student.txt");
+    do{
+        std::cout << "\n==========================================\n";
+        std::cout << "        Student Management System\n";
+        std::cout << "==========================================\n";
+        std::cout << " 1. Add Student\n";
+        std::cout << " 2. Display All Students\n";
+        std::cout << " 3. Find Student By ID\n";
+        std::cout << " 4. Update Student\n";
+        std::cout << " 5. Remove Student\n";
+        std::cout << " 6. Count Students\n";
+        std::cout << " 7. Find Student By Name\n";
+        std::cout << " 8. Display Student By Department\n";
+        std::cout << " 9. Display Student By Semester\n";
+        std::cout << "10. Sort By Name\n";
+        std::cout << "11. Sort By GPA\n";
+        std::cout << "12. Save Students\n";
+        std::cout << " 0. Exit\n";
 
-    manager.displayAllStudents();
+        std::cout << "\nEnter your choice: ";
+
+        std::cin >> choice;
+
+    } while(choice != 0);
 
 
 
