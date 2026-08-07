@@ -204,7 +204,7 @@ void StudentManager::loadFromFile(const std::string& filename)
         std::getline(ss, studentPhone, ',');
         std::getline(ss, studentEmail, ',');
         std::getline(ss, studentAddress, ',');
-        std::getline(ss, studentDateOfBirth, ',');
+        std::getline(ss, studentDateOfBirth);
 
         int studentSemester = std::stoi(studentSemesterStr);
         double studentCGPA = std::stod(studentCGPAStr);
