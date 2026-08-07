@@ -82,6 +82,15 @@ int main(){
                 manager.displayAllStudents();
                 break;
 
+            case 3:
+                {
+                    std::string studentId;
+                    std::cout << "Enter student ID: ";
+                    std::cin >> studentId;
+                    manager.findStudentById(studentId);
+                }
+                break;
+
             case 6:
                 std::cout << "Total number of students: " << manager.countStudents() << std::endl;
                 break;
