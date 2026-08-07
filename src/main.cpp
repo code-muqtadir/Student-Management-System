@@ -122,6 +122,15 @@ int main(){
                     break;
                 }
 
+            case 9:
+            {
+                int studentSemester;
+                std::cout << "Enter semester to display students: ";
+                std::cin >> studentSemester;
+                manager.displayStudentsBySemester(studentSemester);
+                break;
+            }
+
 
             case 0:
                 std::cout << "Exiting the program.\n";
