@@ -52,9 +52,9 @@ int main(){
     manager.addStudent(s3);
     manager.addStudent(s4);
 
-    manager.sortStudentsByName();
+    manager.saveToFile("Student.txt");
 
-    manager.displayAllStudents();
+
 
     return 0;
 }

@@ -1,6 +1,7 @@
 #include "../include/StudentManager.h"
 #include <iostream>
 #include<algorithm>
+#include <fstream>
 
 void StudentManager::addStudent(const Student& student) 
 {
@@ -138,4 +139,39 @@ void StudentManager::sortStudentsByName()
     {
         return a.getStudentFullName() < b.getStudentFullName();
     });
+}
+
+void StudentManager::sortStudentsByCGPA()
+{
+    std::sort(students.begin(), students.end(), [](const Student& a, const Student& b)
+{
+    return a.getStudentCGPA() > b.getStudentCGPA();
+});
+}
+
+void StudentManager::saveToFile(const std::string& filename) const
+{
+    std::ofstream outFile(filename);
+    
+    if(!outFile)
+    {
+        std::cerr << "Error opening file for writing: " << filename << std::endl;
+        return;
+    }
+
+    for(const Student& student: students)
+    {
+        outFile << student.getStudentId() << ","
+                << student.getStudentFullName() << ","
+                << student.getStudentDepartment() << ","
+                << student.getStudentSemester()<< ","
+                << student.getStudentCGPA()<< ","
+                << student.getStudentPhone()<< ","
+                << student.getStudentEmail()<< ","
+                << student.getStudentAddress()<< ","
+                << student.getStudentDateOfBirth()<< "\n";
+    }
+    outFile.close();
+
+    std::cout << "Students saved successfully\n"; 
 }

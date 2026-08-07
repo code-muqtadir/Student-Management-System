@@ -19,7 +19,9 @@ class StudentManager
         void findStudentsByName(const std::string& studentFullName) const;
         void displayStudentsBySemester(const int studentSemester) const;
         void sortStudentsByName();
-        
+        void sortStudentsByCGPA();
+        void saveToFile(const std::string& filename) const;
+
 };
 
 
