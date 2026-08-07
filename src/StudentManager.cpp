@@ -2,6 +2,7 @@
 #include <iostream>
 #include<algorithm>
 #include <fstream>
+#include <sstream>
 
 void StudentManager::addStudent(const Student& student) 
 {
@@ -174,4 +175,46 @@ void StudentManager::saveToFile(const std::string& filename) const
     outFile.close();
 
     std::cout << "Students saved successfully\n"; 
+}
+
+void StudentManager::loadFromFile(const std::string& filename)
+{
+    std::ifstream inFile(filename);
+    if(!inFile)
+    {
+        std::cerr << "Error opening file for reading: " << filename << std::endl;
+        return;
+    }
+
+    students.clear();
+
+    std::string line;
+
+    while(std::getline(inFile, line))
+    {
+        std::stringstream ss(line);
+        std::string studentId, studentFullName, studentDepartment, studentSemesterStr,
+        studentCGPAStr, studentPhone, studentEmail,studentAddress, studentDateOfBirth;
+
+        std::getline(ss, studentId, ',');
+        std::getline(ss, studentFullName, ',');
+        std::getline(ss, studentDepartment, ',');
+        std::getline(ss, studentSemesterStr, ',');
+        std::getline(ss, studentCGPAStr, ',');
+        std::getline(ss, studentPhone, ',');
+        std::getline(ss, studentEmail, ',');
+        std::getline(ss, studentAddress, ',');
+        std::getline(ss, studentDateOfBirth, ',');
+
+        int studentSemester = std::stoi(studentSemesterStr);
+        double studentCGPA = std::stod(studentCGPAStr);
+
+        students.push_back(Student(studentId, studentFullName, studentDepartment, studentSemester,
+        studentCGPA, studentPhone, studentEmail, studentAddress, studentDateOfBirth));
+
+    }
+    inFile.close();
+    std::cout << "Students loaded successfully\n";
+
+    
 }

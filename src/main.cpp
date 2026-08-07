@@ -52,7 +52,11 @@ int main(){
     manager.addStudent(s3);
     manager.addStudent(s4);
 
-    manager.saveToFile("Student.txt");
+    //manager.saveToFile("Student.txt");
+
+    manager.loadFromFile("Student.txt");
+
+    manager.displayAllStudents();
 
 
 
