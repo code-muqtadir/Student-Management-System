@@ -119,6 +119,7 @@ int main(){
                     std::cout << "Enter department to display students: ";
                     std::getline(std::cin >> std::ws,studentDepartment);
                     manager.displayStudentsByDepartment(studentDepartment);
+                    break;
                 }
 
 
