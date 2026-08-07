@@ -85,9 +85,18 @@ int main(){
             case 3:
                 {
                     std::string studentId;
-                    std::cout << "Enter student ID: ";
+                    std::cout << "Enter student ID to find: ";
                     std::cin >> studentId;
                     manager.findStudentById(studentId);
+                }
+                break;
+
+            case 5:
+                {
+                    std::string studentId;
+                    std::cout << "Enter student ID to remove: ";
+                    std::cin >> studentId;
+                    manager.removeStudentById(studentId);
                 }
                 break;
 
