@@ -113,6 +113,14 @@ int main(){
                     break;
                 }
 
+            case 8:
+                {
+                    std::string studentDepartment;
+                    std::cout << "Enter department to display students: ";
+                    std::getline(std::cin >> std::ws,studentDepartment);
+                    manager.displayStudentsByDepartment(studentDepartment);
+                }
+
 
             case 0:
                 std::cout << "Exiting the program.\n";
