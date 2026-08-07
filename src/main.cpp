@@ -81,6 +81,11 @@ int main(){
             case 2:
                 manager.displayAllStudents();
                 break;
+
+            case 0:
+                std::cout << "Exiting the program.\n";
+                break;
+
         }
     
 
