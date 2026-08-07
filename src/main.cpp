@@ -104,6 +104,15 @@ int main(){
                 std::cout << "Total number of students: " << manager.countStudents() << std::endl;
                 break;
 
+            case 7:
+                {
+                    std::string studentFullName;
+                    std::cout << "Enter student full name to find: ";
+                    std::getline(std::cin >> std::ws, studentFullName);
+                    manager.findStudentsByName(studentFullName);
+                    break;
+                }
+
 
             case 0:
                 std::cout << "Exiting the program.\n";
