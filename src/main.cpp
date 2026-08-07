@@ -82,6 +82,11 @@ int main(){
                 manager.displayAllStudents();
                 break;
 
+            case 6:
+                std::cout << "Total number of students: " << manager.countStudents() << std::endl;
+                break;
+
+
             case 0:
                 std::cout << "Exiting the program.\n";
                 break;
