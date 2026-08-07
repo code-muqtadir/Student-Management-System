@@ -86,6 +86,8 @@ int main(){
                 std::cout << "Exiting the program.\n";
                 break;
 
+            default:
+                std::cout << "Invalid choice. Please try again.\n";
         }
     
 
