@@ -76,6 +76,14 @@ int main(){
 
         std::cin >> choice;
 
+        switch(choice)
+        {
+            case 2:
+                manager.displayAllStudents();
+                break;
+        }
+    
+
     } while(choice != 0);
 
 
