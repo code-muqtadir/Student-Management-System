@@ -78,6 +78,59 @@ int main(){
 
         switch(choice)
         {
+            case 1:
+                {
+                    std::string studentId;
+                    std::string studentFullName;
+                    std::string studentDepartment;
+                    int studentSemester;
+                    double studentCGPA;
+                    std::string studentPhone;
+                    std::string studentEmail;
+                    std::string studentAddress;
+                    std::string studentDateOfBirth;
+
+                    std::cout << "Enter student ID: ";
+                    std::cin >> studentId;
+
+                    std::cout << "Enter student full name: ";
+                    std::getline(std::cin>>std::ws, studentFullName);
+
+                    std::cout << "Enter student department: ";
+                    std::getline(std::cin>>std::ws, studentDepartment); 
+
+                    std::cout << "Enter student semester: ";
+                    std::cin >> studentSemester;
+
+                    std::cout << "Enter student CGPA: ";
+                    std::cin >> studentCGPA;
+
+                    std::cout << "Enter student phone: ";
+                    std::cin >> studentPhone;
+
+                    std::cout << "Enter student email: ";
+                    std::cin >> studentEmail;
+
+                    std::cout << "Enter student address: ";
+                    std::getline(std::cin>>std::ws, studentAddress);
+
+                    std::cout << "Enter student date of birth: ";
+                    std::getline(std::cin>>std::ws, studentDateOfBirth);
+
+                    Student newStudent(
+                        studentId,
+                        studentFullName,
+                        studentDepartment,
+                        studentSemester,
+                        studentCGPA,
+                        studentPhone,
+                        studentEmail,
+                        studentAddress,
+                        studentDateOfBirth
+                    );
+
+                    manager.addStudent(newStudent);
+                }
             case 2:
                 manager.displayAllStudents();
                 break;
