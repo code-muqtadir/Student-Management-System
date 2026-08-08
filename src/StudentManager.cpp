@@ -245,3 +245,16 @@ void StudentManager::loadFromFile(const std::string& filename)
 
     
 }
+
+bool StudentManager::duplicateStudentIdExists(const std::string& studentId) const
+{
+    for(const Student& student : students)
+    {
+        if(student.getStudentId() == studentId)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+

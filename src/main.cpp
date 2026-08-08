@@ -55,6 +55,12 @@ int main(){
                     std::cout << "Enter student ID: ";
                     std::cin >> studentId;
 
+                    while(manager.duplicateStudentIdExists(studentId))
+                    {
+                        std::cout << "Student ID already exists. Please enter a unique ID.\n";
+                        std::cin >> studentId;
+                    }
+
                     std::cout << "Enter student full name: ";
                     std::getline(std::cin>>std::ws, studentFullName);
 
