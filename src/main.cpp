@@ -131,6 +131,11 @@ int main(){
                 break;
             }
 
+            case 10:
+                manager.sortStudentsByName();
+                std::cout << "Students sorted by name.\n";
+                break;
+
 
             case 0:
                 std::cout << "Exiting the program.\n";
