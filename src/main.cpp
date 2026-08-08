@@ -59,8 +59,20 @@ int main(){
                     std::cout << "Enter student semester: ";
                     std::cin >> studentSemester;
 
+                    while(studentSemester < 1 || studentSemester > 12)
+                    {
+                        std::cout << "Invalid semester. Please enter a value between 1 and 12: ";
+                        std::cin >> studentSemester;
+                    }
+
                     std::cout << "Enter student CGPA: ";
                     std::cin >> studentCGPA;
+
+                    while(studentCGPA < 0.0 || studentCGPA > 4.0)
+                    {
+                        std::cout << "Invalid CGPA. Please enter a value between 0.0 and 4.0: ";
+                        std::cin >> studentCGPA;
+                    }
 
                     std::cout << "Enter student phone: ";
                     std::cin >> studentPhone;
