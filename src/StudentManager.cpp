@@ -61,6 +61,7 @@ void StudentManager::updateStudentById(const std::string& studentId)
             std::string newFullName, newDepartment;
             int newSemester;
             double newCGPA;
+            std::string newStudentPhone, newStudentEmail, newStudentAddress, newStudentDateOfBirth;
 
             std::cout << "Enter new full name: ";
             std::getline(std::cin >> std::ws, newFullName);
@@ -95,6 +96,22 @@ void StudentManager::updateStudentById(const std::string& studentId)
             }
 
             it->setStudentCGPA(newCGPA);
+
+            std::cout << "Enter new phone number: ";
+            std::getline(std::cin >> std::ws, newStudentPhone);
+            it->setStudentPhone(newStudentPhone);
+
+            std::cout << "Enter new email: ";
+            std::getline(std::cin >> std::ws, newStudentEmail);
+            it->setStudentEmail(newStudentEmail);
+
+            std::cout << "Enter new address: ";
+            std::getline(std::cin >> std::ws, newStudentAddress);
+            it->setStudentAddress(newStudentAddress);
+
+            std::cout << "Enter new date of birth: ";
+            std::getline(std::cin >> std::ws, newStudentDateOfBirth);
+            it->setStudentDateOfBirth(newStudentDateOfBirth);
 
             std::cout << "Student with ID " << studentId << " has been updated." << std::endl;
 
