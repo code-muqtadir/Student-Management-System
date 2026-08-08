@@ -72,10 +72,24 @@ void StudentManager::updateStudentById(const std::string& studentId)
 
             std::cout << "Enter new semester: ";
             std::cin >> newSemester;
+
+            while(newSemester < 1 || newSemester > 12) 
+            {
+                std::cout << "Invalid semester. Please enter a value between 1 and 12: ";
+                std::cin >> newSemester;
+            }
+
             it->setStudentSemester(newSemester);
 
             std::cout << "Enter new CGPA: ";
             std::cin >> newCGPA;
+
+            while(newCGPA < 0.0 || newCGPA > 4.0) 
+            {
+                std::cout << "Invalid CGPA. Please enter a value between 0.0 and 4.0: ";
+                std::cin >> newCGPA;
+            }
+
             it->setStudentCGPA(newCGPA);
 
             std::cout << "Student with ID " << studentId << " has been updated." << std::endl;
