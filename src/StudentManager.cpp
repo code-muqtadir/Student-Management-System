@@ -4,9 +4,18 @@
 #include <fstream>
 #include <sstream>
 
-void StudentManager::addStudent(const Student& student) 
+bool StudentManager::addStudent(const Student& student) 
 {
+    for (const Student& s : students) 
+    {
+        if (s.getStudentId() == student.getStudentId()) 
+        {
+            std::cout << "Student with ID " << student.getStudentId() << " already exists." << std::endl;
+            return false;
+        }
+    }
     students.push_back(student);
+    return true;
 }
 
 void StudentManager::displayAllStudents() const

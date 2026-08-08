@@ -7,50 +7,7 @@ int main(){
 
     StudentManager manager;
 
-    Student s1(
-        "S001", 
-        "John Doe", 
-        "Computer Science", 
-        3, 3.75, 
-        "123-456-7890", 
-        "john.doe@example.com", 
-        "123 Main St", 
-        "1999-01-01");
-
-    Student s2(
-        "S002", 
-        "Jane Smith", 
-        "Mathematics", 
-        3, 3.9, 
-        "098-765-4321", 
-        "jane.smith@example.com", 
-        "456 Oak Ave", 
-        "2000-05-15");
-
-    Student s3(
-        "S003", 
-        "Alice Johnson", 
-        "Physics", 
-        4, 3.8, 
-        "555-123-4567", 
-        "alice.johnson@example.com", 
-        "789 Pine Rd", 
-        "1998-11-20");
-
-    Student s4(
-        "S004", 
-        "Bob Brown", 
-        "Computer Science", 
-        1, 3.6, 
-        "999-888-7777", 
-        "bob.brown@example.com", 
-        "321 Elm St", 
-        "2000-08-10");
-
-    manager.addStudent(s1);
-    manager.addStudent(s2);
-    manager.addStudent(s3);
-    manager.addStudent(s4);
+    manager.loadFromFile("Student.txt");
 
     int choice;
 
@@ -129,7 +86,11 @@ int main(){
                         studentDateOfBirth
                     );
 
-                    manager.addStudent(newStudent);
+
+                    if(manager.addStudent(newStudent))
+                    {
+                        std::cout << "Student added successfully.\n";
+                    }
 
                     break;
                 }

@@ -9,7 +9,7 @@ class StudentManager
         std::vector<Student> students;
 
     public:
-        void addStudent(const Student& student);
+        bool addStudent(const Student& student);
         void displayAllStudents() const;
         void findStudentById(const std::string& studentId) const;
         void removeStudentById(const std::string& studentId);
