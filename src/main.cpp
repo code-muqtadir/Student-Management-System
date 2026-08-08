@@ -31,7 +31,12 @@ int main(){
 
         std::cout << "\nEnter your choice: ";
 
-        std::cin >> choice;
+        while(!(std::cin >> choice))
+             {
+                std::cin.clear();
+                std::cin.ignore(10000, '\n');
+                std::cout << "Invalid input. Please enter a number: ";
+            }
 
         switch(choice)
         {
@@ -58,9 +63,12 @@ int main(){
 
                     std::cout << "Enter student semester: ";
                     std::cin >> studentSemester;
+                    
 
-                    while(studentSemester < 1 || studentSemester > 12)
+                    while(std::cin.fail() || studentSemester < 1 || studentSemester > 12)
                     {
+                        std::cin.clear();
+                        std::cin.ignore(10000, '\n');
                         std::cout << "Invalid semester. Please enter a value between 1 and 12: ";
                         std::cin >> studentSemester;
                     }
@@ -68,8 +76,10 @@ int main(){
                     std::cout << "Enter student CGPA: ";
                     std::cin >> studentCGPA;
 
-                    while(studentCGPA < 0.0 || studentCGPA > 4.0)
+                    while(std::cin.fail() || studentCGPA < 0.0 || studentCGPA > 4.0)
                     {
+                        std::cin.clear();
+                        std::cin.ignore(10000, '\n');
                         std::cout << "Invalid CGPA. Please enter a value between 0.0 and 4.0: ";
                         std::cin >> studentCGPA;
                     }
@@ -164,6 +174,14 @@ int main(){
                    int studentSemester;
                    std::cout << "Enter semester to display students: ";
                    std::cin >> studentSemester;
+
+                   while(std::cin.fail() || studentSemester < 1 || studentSemester > 12)
+                   {
+                       std::cin.clear();
+                       std::cin.ignore(10000, '\n');
+                       std::cout << "Invalid semester. Please enter a value between 1 and 12: ";
+                       std::cin >> studentSemester;
+                   }
                    manager.displayStudentsBySemester(studentSemester);
                    break;
                }
