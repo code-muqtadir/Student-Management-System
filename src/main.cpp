@@ -130,6 +130,8 @@ int main(){
                     );
 
                     manager.addStudent(newStudent);
+
+                    break;
                 }
             case 2:
                 manager.displayAllStudents();
