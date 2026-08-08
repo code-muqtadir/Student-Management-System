@@ -68,7 +68,7 @@ int main(){
         std::cout << " 8. Display Student By Department\n";
         std::cout << " 9. Display Student By Semester\n";
         std::cout << "10. Sort By Name\n";
-        std::cout << "11. Sort By GPA\n";
+        std::cout << "11. Sort By CGPA\n";
         std::cout << "12. Save Students\n";
         std::cout << " 0. Exit\n";
 
@@ -142,6 +142,17 @@ int main(){
                {
                    manager.sortStudentsByCGPA();
                    std::cout << "Students sorted by CGPA.\n";
+                   break;
+               }
+
+            case 12:
+               {
+                   //std::string filename;
+                   //std::cout << "Enter filename to save students: ";
+                   //std::cin >> filename;
+                   //manager.saveToFile(filename);
+
+                   manager.saveToFile("Student.txt");
                    break;
                }
 
