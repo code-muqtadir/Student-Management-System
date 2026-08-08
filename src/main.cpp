@@ -91,6 +91,15 @@ int main(){
                 }
                 break;
 
+            case 4:
+                {
+                    std::string studentId;
+                    std::cout << "Enter student ID to update: ";
+                    std::cin >> studentId;
+                    manager.updateStudentById(studentId);
+                }
+                break;
+
             case 5:
                 {
                     std::string studentId;
