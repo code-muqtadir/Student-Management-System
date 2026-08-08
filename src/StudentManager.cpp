@@ -115,7 +115,7 @@ void StudentManager::updateStudentById(const std::string& studentId)
 
             std::cout << "Student with ID " << studentId << " has been updated." << std::endl;
 
-            it->displayStudent(); // Display the updated student information
+            it->displayStudent(); 
             return;
         }
     }
@@ -250,12 +250,20 @@ void StudentManager::loadFromFile(const std::string& filename)
         std::getline(ss, studentAddress, ',');
         std::getline(ss, studentDateOfBirth);
 
+        try
+        {
+        
         int studentSemester = std::stoi(studentSemesterStr);
         double studentCGPA = std::stod(studentCGPAStr);
 
         students.push_back(Student(studentId, studentFullName, studentDepartment, studentSemester,
         studentCGPA, studentPhone, studentEmail, studentAddress, studentDateOfBirth));
-
+        
+        }
+        catch(const std::invalid_argument& e)
+        {
+            std::cerr << "Error parsing student data: " << e.what() << std::endl;
+        }
     }
     inFile.close();
     std::cout << "Students loaded successfully\n";
