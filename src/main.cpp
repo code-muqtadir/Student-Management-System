@@ -123,18 +123,27 @@ int main(){
                 }
 
             case 9:
-            {
-                int studentSemester;
-                std::cout << "Enter semester to display students: ";
-                std::cin >> studentSemester;
-                manager.displayStudentsBySemester(studentSemester);
-                break;
-            }
+               {
+                   int studentSemester;
+                   std::cout << "Enter semester to display students: ";
+                   std::cin >> studentSemester;
+                   manager.displayStudentsBySemester(studentSemester);
+                   break;
+               }
 
             case 10:
-                manager.sortStudentsByName();
-                std::cout << "Students sorted by name.\n";
-                break;
+               {
+                   manager.sortStudentsByName();
+                   std::cout << "Students sorted by name.\n";
+                   break;
+               }
+
+            case 11:
+               {
+                   manager.sortStudentsByCGPA();
+                   std::cout << "Students sorted by CGPA.\n";
+                   break;
+               }
 
 
             case 0:
